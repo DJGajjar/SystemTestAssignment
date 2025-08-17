@@ -1,0 +1,6 @@
+framework module Pods_AWSAssignment {
+  umbrella header "Pods-AWSAssignment-umbrella.h"
+
+  export *
+  module * { export * }
+}

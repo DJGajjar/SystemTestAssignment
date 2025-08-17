@@ -6,7 +6,18 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2DC4691E1239F4FBAE6A6E23 /* Pods_AWSAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5FC4FAD345BBFA135ED3FF1 /* Pods_AWSAssignment.framework */; };
+		B07B825E553D6799A1FC07F9 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 6EA3781AC1492D4FCEC18D8F /* amplifyconfiguration.json */; };
+		BF6A262C61527665ADCECDD1 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 077A4E5EE46C103FA8A07641 /* awsconfiguration.json */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		077A4E5EE46C103FA8A07641 /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		567AFED072186E8C2E355653 /* Pods-AWSAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSAssignment.release.xcconfig"; path = "Target Support Files/Pods-AWSAssignment/Pods-AWSAssignment.release.xcconfig"; sourceTree = "<group>"; };
+		6EA3781AC1492D4FCEC18D8F /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
+		89FBEC89A9F2E80E14EAB0B6 /* Pods-AWSAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSAssignment.debug.xcconfig"; path = "Target Support Files/Pods-AWSAssignment/Pods-AWSAssignment.debug.xcconfig"; sourceTree = "<group>"; };
+		F5FC4FAD345BBFA135ED3FF1 /* Pods_AWSAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AWSAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF7E7F082E519C6B00B1DEA5 /* AWSAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWSAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -36,17 +47,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DC4691E1239F4FBAE6A6E23 /* Pods_AWSAssignment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FC7C62BD9ADA45CBCFB5658 /* AmplifyConfig */ = {
+			isa = PBXGroup;
+			children = (
+				077A4E5EE46C103FA8A07641 /* awsconfiguration.json */,
+				6EA3781AC1492D4FCEC18D8F /* amplifyconfiguration.json */,
+			);
+			name = AmplifyConfig;
+			sourceTree = "<group>";
+		};
+		6B2ACA033377E9171C893C1C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				89FBEC89A9F2E80E14EAB0B6 /* Pods-AWSAssignment.debug.xcconfig */,
+				567AFED072186E8C2E355653 /* Pods-AWSAssignment.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F7C35E81BDD753AA43247564 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5FC4FAD345BBFA135ED3FF1 /* Pods_AWSAssignment.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FF7E7EFF2E519C6B00B1DEA5 = {
 			isa = PBXGroup;
 			children = (
 				FF7E7F0A2E519C6B00B1DEA5 /* AWSAssignment */,
 				FF7E7F092E519C6B00B1DEA5 /* Products */,
+				6B2ACA033377E9171C893C1C /* Pods */,
+				F7C35E81BDD753AA43247564 /* Frameworks */,
+				0FC7C62BD9ADA45CBCFB5658 /* AmplifyConfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,9 +106,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF7E7F1B2E519C6C00B1DEA5 /* Build configuration list for PBXNativeTarget "AWSAssignment" */;
 			buildPhases = (
+				BC955B817B33A3D4DE719DDC /* [CP] Check Pods Manifest.lock */,
 				FF7E7F042E519C6B00B1DEA5 /* Sources */,
 				FF7E7F052E519C6B00B1DEA5 /* Frameworks */,
 				FF7E7F062E519C6B00B1DEA5 /* Resources */,
+				462A43283CC7B857A63B95A1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -77,8 +120,6 @@
 				FF7E7F0A2E519C6B00B1DEA5 /* AWSAssignment */,
 			);
 			name = AWSAssignment;
-			packageProductDependencies = (
-			);
 			productName = AWSAssignment;
 			productReference = FF7E7F082E519C6B00B1DEA5 /* AWSAssignment.app */;
 			productType = "com.apple.product-type.application";
@@ -122,10 +163,58 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF6A262C61527665ADCECDD1 /* awsconfiguration.json in Resources */,
+				B07B825E553D6799A1FC07F9 /* amplifyconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		462A43283CC7B857A63B95A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AWSAssignment/Pods-AWSAssignment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AWSAssignment/Pods-AWSAssignment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AWSAssignment/Pods-AWSAssignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC955B817B33A3D4DE719DDC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AWSAssignment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FF7E7F042E519C6B00B1DEA5 /* Sources */ = {
@@ -140,6 +229,7 @@
 /* Begin XCBuildConfiguration section */
 		FF7E7F1C2E519C6C00B1DEA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89FBEC89A9F2E80E14EAB0B6 /* Pods-AWSAssignment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -167,6 +257,7 @@
 		};
 		FF7E7F1D2E519C6C00B1DEA5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 567AFED072186E8C2E355653 /* Pods-AWSAssignment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
