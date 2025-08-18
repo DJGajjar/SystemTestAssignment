@@ -6,7 +6,16 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		7FA4E0A0A9C5908B35BE34E8 /* Pods_AWSAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98DF3671B1971AEFFEC4851C /* Pods_AWSAssignment.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		077A4E5EE46C103FA8A07641 /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		6AC0D7DFF06C853A7100EDEC /* Pods-AWSAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSAssignment.release.xcconfig"; path = "Target Support Files/Pods-AWSAssignment/Pods-AWSAssignment.release.xcconfig"; sourceTree = "<group>"; };
+		6EA3781AC1492D4FCEC18D8F /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
+		98DF3671B1971AEFFEC4851C /* Pods_AWSAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AWSAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAD8E39C68B2A88F9DC35025 /* Pods-AWSAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSAssignment.debug.xcconfig"; path = "Target Support Files/Pods-AWSAssignment/Pods-AWSAssignment.debug.xcconfig"; sourceTree = "<group>"; };
 		FF7E7F082E519C6B00B1DEA5 /* AWSAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWSAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -36,17 +45,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FA4E0A0A9C5908B35BE34E8 /* Pods_AWSAssignment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FC7C62BD9ADA45CBCFB5658 /* AmplifyConfig */ = {
+			isa = PBXGroup;
+			children = (
+				077A4E5EE46C103FA8A07641 /* awsconfiguration.json */,
+				6EA3781AC1492D4FCEC18D8F /* amplifyconfiguration.json */,
+			);
+			name = AmplifyConfig;
+			sourceTree = "<group>";
+		};
+		39DA493F0942A1D3D62DA1CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98DF3671B1971AEFFEC4851C /* Pods_AWSAssignment.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B2ACA033377E9171C893C1C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FAD8E39C68B2A88F9DC35025 /* Pods-AWSAssignment.debug.xcconfig */,
+				6AC0D7DFF06C853A7100EDEC /* Pods-AWSAssignment.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FF7E7EFF2E519C6B00B1DEA5 = {
 			isa = PBXGroup;
 			children = (
 				FF7E7F0A2E519C6B00B1DEA5 /* AWSAssignment */,
 				FF7E7F092E519C6B00B1DEA5 /* Products */,
+				6B2ACA033377E9171C893C1C /* Pods */,
+				0FC7C62BD9ADA45CBCFB5658 /* AmplifyConfig */,
+				39DA493F0942A1D3D62DA1CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF7E7F1B2E519C6C00B1DEA5 /* Build configuration list for PBXNativeTarget "AWSAssignment" */;
 			buildPhases = (
+				3D993D85EBE963E0A6AEE5A9 /* [CP] Check Pods Manifest.lock */,
 				FF7E7F042E519C6B00B1DEA5 /* Sources */,
 				FF7E7F052E519C6B00B1DEA5 /* Frameworks */,
 				FF7E7F062E519C6B00B1DEA5 /* Resources */,
+				FF287AB0040EAA9A49AAC693 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -77,8 +118,6 @@
 				FF7E7F0A2E519C6B00B1DEA5 /* AWSAssignment */,
 			);
 			name = AWSAssignment;
-			packageProductDependencies = (
-			);
 			productName = AWSAssignment;
 			productReference = FF7E7F082E519C6B00B1DEA5 /* AWSAssignment.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +166,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3D993D85EBE963E0A6AEE5A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AWSAssignment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF287AB0040EAA9A49AAC693 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AWSAssignment/Pods-AWSAssignment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AWSAssignment/Pods-AWSAssignment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AWSAssignment/Pods-AWSAssignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FF7E7F042E519C6B00B1DEA5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +225,7 @@
 /* Begin XCBuildConfiguration section */
 		FF7E7F1C2E519C6C00B1DEA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAD8E39C68B2A88F9DC35025 /* Pods-AWSAssignment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -150,8 +236,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -159,14 +245,19 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Darshan.AWSAssignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		FF7E7F1D2E519C6C00B1DEA5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AC0D7DFF06C853A7100EDEC /* Pods-AWSAssignment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -177,8 +268,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -186,9 +277,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Darshan.AWSAssignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -229,7 +324,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -292,7 +387,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

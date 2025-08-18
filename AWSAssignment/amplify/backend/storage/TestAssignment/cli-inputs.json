@@ -1,0 +1,18 @@
+{
+  "resourceName": "TestAssignment",
+  "tableName": "Test",
+  "partitionKey": {
+    "fieldName": "userId",
+    "fieldType": "string"
+  },
+  "gsi": [
+    {
+      "name": "email",
+      "partitionKey": {
+        "fieldName": "email",
+        "fieldType": "string"
+      }
+    }
+  ],
+  "triggerFunctions": []
+}
