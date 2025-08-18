@@ -8,36 +8,38 @@
 import UIKit
 import Amplify
 import AmplifyPlugins
-
-//import AWSS3StoragePlugin
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
+    func sharedAppDelegate() -> AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+                       
+        IQKeyboardManager.shared.isEnabled = true
         
-//        window = UIWindow(frame: UIScreen.main.bounds)
-//                let authVC = LoginController()
-//                window?.rootViewController = UINavigationController(rootViewController: authVC)
-//                window?.makeKeyAndVisible()
-                
-                configureAmplify()
+        do {
+            try Amplify.add(plugin: AWSCognitoAuthPlugin())
+            try Amplify.configure()
+            print("Amplify configured with Auth plugin")
+        } catch {
+            print("An error occurred setting up Amplify: \(error)")
+        }
         return true
     }
-
-    private func configureAmplify() {
-            do {
-                try Amplify.add(plugin: AWSCognitoAuthPlugin())
-                try Amplify.add(plugin: AWSS3StoragePlugin())
-                try Amplify.configure()
-                print("Amplify configured successfully")
-            } catch {
-                print("Failed to initialize Amplify: \(error)")
-            }
-        }
+    
+    func application(_ application: UIApplication, shouldSaveApplicationState coder: NSCoder) -> Bool {
+        return false
+    }
+    func application(_ application: UIApplication, shouldRestoreApplicationState coder: NSCoder) -> Bool {
+        return false
+    }
     
     // MARK: UISceneSession Lifecycle
 
@@ -51,6 +53,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+    
+    // MARK - TextField Padding Method
+    func getTextFieldLeftAndRightView() -> UIView {
+        let paddingView: UIView = UIView.init(frame: CGRect(x:0, y: 0, width:10, height:10))
+        return paddingView
+        
+    }
+    
+    func getTextFieldLeftAndRightViewInEditProfile() -> UIView {
+        let paddingView: UIView = UIView.init(frame: CGRect(x:0, y: 0, width:10, height:5))
+        return paddingView
+    }
+    
+    func getTextFieldLeftAndRight_1View() -> UIView {
+        let paddingView: UIView = UIView.init(frame: CGRect(x:0, y: 0, width:10, height:10))
+        return paddingView
+        
+    }
+    
+    func getTextFieldLeftAndRightViewInEdit_1Profile() -> UIView {
+        let paddingView: UIView = UIView.init(frame: CGRect(x:0, y: 0, width:10, height:5))
+        return paddingView
     }
 }
 
